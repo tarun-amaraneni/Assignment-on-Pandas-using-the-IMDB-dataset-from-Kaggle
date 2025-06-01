@@ -40,23 +40,22 @@ top_10 = df_cleaned.nlargest(10, 'imdb_score')
 print("\nTop 10 Movies by IMDB Rating:")
 print(top_10[['movie_title', 'imdb_score']])
 
-# Histogram of Ratings
+import matplotlib.pyplot as plt
+
+# Histogram
 plt.figure(figsize=(8,5))
 df_cleaned['imdb_score'].plot.hist(bins=20, color='skyblue', edgecolor='black')
 plt.title('Distribution of IMDB Ratings')
-plt.xlabel('Rating')
+plt.xlabel('IMDB Score')
 plt.ylabel('Number of Movies')
 plt.grid(True)
-plt.tight_layout()
-plt.savefig("assets/histogram.png")
 plt.show()
 
-# Bar Chart of Top 10 Movies
+# Bar Chart
 plt.figure(figsize=(10,6))
 top_10.set_index('movie_title')['imdb_score'].plot.bar(color='orange')
 plt.title('Top 10 Highest Rated Movies')
 plt.ylabel('IMDB Score')
 plt.xticks(rotation=45, ha='right')
 plt.tight_layout()
-plt.savefig("assets/top10.png")
 plt.show()
