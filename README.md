@@ -1,4 +1,4 @@
-# Assignment-on-Pandas-using-the-IMDB-dataset-from-Kaggle
+# Exploring - Pandas
 
 # 🎬 IMDB Movie Dataset Analysis using Pandas
 
